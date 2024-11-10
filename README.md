@@ -35,28 +35,23 @@ After activating the virtual environment, install the required packages:
 pip install -r requirements.txt
 ```
 
-### 4. Load the JSON Data
-
-Make sure you have the following JSON files in your project directory:
-
-- `users.json`: Stores user data (e.g., students and teachers).
-- `portfolios.json`: Stores user portfolios, including stock holdings and points balance.
-- `houses.json`: Stores house data, including stock prices and price history.
-
-If these files are not available, you can create sample files or use your own data structure.
-
 ## Setup
 
-### 1. Configure Flask
+### 1. Connect to a Database
 
-The Flask app is ready to run once the dependencies are installed. The main script for running the app is `dummy.py`. This file includes the setup for Flask, Flask-RESTful API routes, and the JSON data loading function.
+Create .env file in the root directory and add the following environment variables:
+
+```bash
+DB_PASSWORD
+DATABASE_URL
+```
 
 ### 2. Run the Application
 
-Start the Flask development server:
+Start the Django development server:
 
 ```bash
-python dummy_api.py
+python manage.py runserver
 ```
 
 By default, the application will be available at [http://127.0.0.1:5000](http://127.0.0.1:5000).
