@@ -1,10 +1,4 @@
 {
-  "builds": [
-    {
-      "src": "ispse/asgi.py",
-      "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb" }
-    }
-  ],
+  "builds": [{ "src": "ispse/asgi.py", "use": "@vercel/python" }],
   "routes": [{ "src": "/(.*)", "dest": "ispse/asgi.py" }]
 }
