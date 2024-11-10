@@ -1,3 +1,7 @@
-/.idea
-/.venv
-/print_struct.py
+__pycache__/
+*.py[cod]
+*$py.class
+
+.env
+.venv
+.idea

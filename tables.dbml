@@ -23,7 +23,7 @@ Table StockPriceHistory {
 Table Portfolios {
   portfolio_id varchar [pk]
   user_id varchar [ref: > Users.user_id]
-  points_balance int
+  points_balance int [ref: > Users.points_balance]
 }
 
 Table PortfolioItems {
