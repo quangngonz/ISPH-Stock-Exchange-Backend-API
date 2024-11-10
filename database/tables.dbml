@@ -1,0 +1,56 @@
+Table Users {
+  user_id varchar [pk]
+  username varchar [unique]
+  house varchar
+  points_balance int
+}
+
+Table Stocks {
+  stock_ticker char(3) [pk]
+  stock_name varchar [unique]
+  full_name varchar
+  current_price float
+  volume int
+}
+
+Table StockPriceHistory {
+  price_history_id varchar [pk]
+  stock_ticker char(3) [ref: > Stocks.stock_ticker]
+  price float
+  timestamp datetime
+}
+
+Table Portfolios {
+  portfolio_id varchar [pk]
+  user_id varchar [ref: > Users.user_id]
+  points_balance int
+}
+
+Table PortfolioItems {
+  portfolio_item_id varchar [pk]
+  portfolio_id varchar [ref: > Portfolios.portfolio_id]
+  stock_ticker char(3) [ref: > Stocks.stock_ticker]
+  quantity int
+}
+
+Table Transactions {
+  transaction_id varchar [pk]
+  user_id varchar [ref: > Users.user_id]
+  stock_ticker char(3) [ref: > Stocks.stock_ticker]
+  quantity int
+  transaction_type transaction_type
+  timestamp datetime
+}
+
+Table Earnings {
+  earning_id varchar [pk]
+  user_id varchar [ref: > Users.user_id]
+  points int
+  code varchar
+  timestamp datetime
+}
+
+enum transaction_type {
+  buy
+  sell
+}
