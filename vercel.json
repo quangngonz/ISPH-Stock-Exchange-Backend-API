@@ -1,4 +1,10 @@
 {
-  "builds": [{ "src": "ispse/asgi.py", "use": "@vercel/python" }],
+  "builds": [
+    {
+      "src": "ispse/asgi.py",
+      "use": "@vercel/python",
+      "config": { "runtime": "python 3.12" }
+    }
+  ],
   "routes": [{ "src": "/(.*)", "dest": "ispse/asgi.py" }]
 }
