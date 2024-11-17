@@ -33,6 +33,26 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1").split("\n")
 
 CORS_ALLOW_ALL_ORIGINS = TRUE
+CORS_ALLOW_METHODS = [
+'DELETE',
+'GET',
+'OPTIONS',
+'PATCH',
+'POST',
+'PUT',
+]
+CORS_ALLOW_HEADERS = [
+'accept',
+'accept-encoding',
+'authorization',
+'content-type',
+'dnt',
+'origin',
+'user-agent',
+'x-csrftoken',
+'x-requested-with',
+]
+CORS_URLS_REGEX = r'^/api/.*$'
 
 # Application definition
 
