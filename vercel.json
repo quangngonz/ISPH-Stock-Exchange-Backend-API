@@ -1,5 +1,6 @@
+
 {
-"headers": [
+  "headers": [
     {
       "source": "/api/(.*)",
       "headers": [
@@ -18,5 +19,11 @@
       "config": { "runtime": "python 3.12" }
     }
   ],
-  "routes": [{ "src": "/(.*)", "dest": "ispse/asgi.py" }]
+
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "ispse/asgi.py"
+    }
+  ]
 }
