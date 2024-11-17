@@ -32,7 +32,7 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1").split("\n")
 
-CORS_ALLOW_ALL_ORIGINS = TRUE
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_METHODS = [
 'DELETE',
 'GET',
