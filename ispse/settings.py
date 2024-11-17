@@ -32,6 +32,8 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1").split("\n")
 
+CORS_ALLOW_ALL_ORIGINS = TRUE
+
 # Application definition
 
 INSTALLED_APPS = [
